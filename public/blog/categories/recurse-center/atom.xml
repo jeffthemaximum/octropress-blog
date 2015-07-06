@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jeff's Recurse Center Blog]]></title>
-  <link href="https://obscure-atoll-2224.herokuapp.com//atom.xml" rel="self"/>
+  <title><![CDATA[Category: Recurse Center | Jeff's Recurse Center Blog]]></title>
+  <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/recurse-center/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
   <updated>2015-07-06T14:43:02-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
