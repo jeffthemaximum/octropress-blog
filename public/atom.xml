@@ -4,7 +4,7 @@
   <title><![CDATA[Jeff's Recurse Center Blog]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-07-10T09:47:34-04:00</updated>
+  <updated>2015-07-10T16:40:11-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -18,7 +18,19 @@
     <link href="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/08/recurse-center-day-3/"/>
     <updated>2015-07-08T09:43:05-04:00</updated>
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/08/recurse-center-day-3</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Day 3 was a whirlwind! Two days behind me, and RC already feels pretty magical. That&rsquo;s not a metaphor. I kind of feel like I&rsquo;m at Hogwarts and I&rsquo;m learning magic spells, just like Harry, Rupert, and Hermione.</p>
+
+<p><img src="https://obscure-atoll-2224.herokuapp.com//images/harry.jpg" /></p>
+
+<p>Everytime I learn some new python syntax, or some new git commands, or I get my blog to do something I didn&rsquo;t know how to do before, I feel just like a Hogwarts student who has learned some new magical spell. <a href="https://youtu.be/nKIu9yen5nc?t=4m51s">Getting code to work really does feel like a magical superpower!</a></p>
+
+<p>What&rsquo;d I do today? Well, I crashed my blog! I got it back up and running now though. I actually wrote a whole day 3 post at some point, but I lost it. It&rsquo;s somewhere in my various git commit&rsquo;s, but I don&rsquo;t feel like searching back through them to see which has it :-/</p>
+
+<p>I battled object oriented programming in python, and I lost. OOP is like this ceiling that I just can&rsquo;t get past, but I&rsquo;ll bust through eventually, cuz I&rsquo;m smart!</p>
+
+<p>I did a bunch of puzzle style challenges at <a href="http://www.codeeval.com">CodeEval</a>.</p>
+
+<p>I learned a bunch of other stuff, too, but I can&rsquo;t remember what I learned now! I&rsquo;d been keeping a hand-written notebook with scratched out notes about what I&rsquo;d learned each day. It was a great way to document everything I&rsquo;d learned each day. You stay so engaged and busy at RC, it&rsquo;s easy to forget just how much you grow everyday. But, writing a little note to yourself everytime you learn something new is a good way to record just how much you&rsquo;ve grown everyday. Unfortunately, I lost my list! I think I&rsquo;ll start up a Google Doc next week, which should be harder to lose.</p>
 ]]></content>
   </entry>
   
