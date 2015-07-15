@@ -94,9 +94,6 @@
 
 <time class='entry-date' datetime='2015-07-15T12:04:14-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:04 pm</span></time>
         
-           | <a href="/blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/#disqus_thread"
-             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/">Comments</a>
-        
       </p>
     
   </header>
@@ -104,7 +101,7 @@
 
   <div class="entry-content"><p>Let&rsquo;s say you have two programs that need to communicate with eachother via stdin and stdout. <a href="http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html">Pipes</a> is one way to accomplish this. A pipe is a connection between two processes such that the stdout of one program becomes the stdin of the other.</p>
 
-<p>With python, this python process is streamlines with the <a href="https://docs.python.org/2/library/subprocess.html">subprocess module</a>.</p>
+<p>With python, this piping process is streamlined with the <a href="https://docs.python.org/2/library/subprocess.html">subprocess module</a>.</p>
 
 <p>Let&rsquo;s look at an example of how this plays out in python. Take our first program, foo.py:</p>
 
@@ -151,7 +148,9 @@ while True:
 </code></pre>
 
 
+<p>You&rsquo;ll notice two key differences between bar.py and baz.py. First, baz.py uses a &ldquo;stdout&rdquo; arg in it&rsquo;s call to subpress.Popen, where bar.py uses a &ldquo;stdin&rdquo; arg here. Second, baz.py replaces bar.py&rsquo;s &ldquo;proc.communicate()&rdquo; call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.</p>
 
+<p>Any thoughts, questions, comments?</p>
 </div>
   
   
@@ -174,9 +173,6 @@ while True:
 
 
 <time class='entry-date' datetime='2015-07-10T16:45:48-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:45 pm</span></time>
-        
-           | <a href="/blog/2015/07/10/recurse-center-day-4-and-5/#disqus_thread"
-             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/10/recurse-center-day-4-and-5/">Comments</a>
         
       </p>
     
@@ -227,9 +223,6 @@ while True:
 
 <time class='entry-date' datetime='2015-07-08T09:43:05-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:43 am</span></time>
         
-           | <a href="/blog/2015/07/08/recurse-center-day-3/#disqus_thread"
-             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/08/recurse-center-day-3/">Comments</a>
-        
       </p>
     
   </header>
@@ -270,9 +263,6 @@ while True:
 
 
 <time class='entry-date' datetime='2015-07-07T09:41:35-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:41 am</span></time>
-        
-           | <a href="/blog/2015/07/07/recurse-center-day-2/#disqus_thread"
-             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/07/recurse-center-day-2/">Comments</a>
         
       </p>
     
@@ -324,9 +314,6 @@ while True:
 
 
 <time class='entry-date' datetime='2015-07-06T14:18:42-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:18 pm</span></time>
-        
-           | <a href="/blog/2015/07/06/recurse-center-day-1/#disqus_thread"
-             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/06/recurse-center-day-1/">Comments</a>
         
       </p>
     
@@ -450,19 +437,6 @@ Meeting MRC kinda feels like I&rsquo;m meeting a celebrity. I did my RC skype in
 
 </footer>
   
-
-<script type="text/javascript">
-      var disqus_shortname = 'jeffsrecursecenterblog';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
 
 
 

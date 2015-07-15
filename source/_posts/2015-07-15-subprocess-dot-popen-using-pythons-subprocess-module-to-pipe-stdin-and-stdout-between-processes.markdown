@@ -8,7 +8,7 @@ categories: technical
 
 Let's say you have two programs that need to communicate with eachother via stdin and stdout. [Pipes](http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html) is one way to accomplish this. A pipe is a connection between two processes such that the stdout of one program becomes the stdin of the other.
 
-With python, this python process is streamlines with the [subprocess module](https://docs.python.org/2/library/subprocess.html). 
+With python, this piping process is streamlined with the [subprocess module](https://docs.python.org/2/library/subprocess.html). 
 
 Let's look at an example of how this plays out in python. Take our first program, foo.py: 
 
@@ -49,3 +49,6 @@ while True:
     break
 </code></pre>
 
+You'll notice two key differences between bar.py and baz.py. First, baz.py uses a "stdout" arg in it's call to subpress.Popen, where bar.py uses a "stdin" arg here. Second, baz.py replaces bar.py's "proc.communicate()" call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.
+
+Any thoughts, questions, comments? 
