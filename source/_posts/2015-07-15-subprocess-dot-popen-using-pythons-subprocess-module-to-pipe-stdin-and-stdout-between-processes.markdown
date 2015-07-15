@@ -27,7 +27,7 @@ All foo.py does is print "Hello World" with an iterator number, and it does this
 **bar.py:**
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
 
-proc = subprocess.Popen(['python','fake_chess_engine.py'],stdin=subprocess.PIPE)
+proc = subprocess.Popen(['python','foo.py'],stdin=subprocess.PIPE)
 
 proc.communicate()
 </code></pre>
@@ -39,7 +39,7 @@ Now, let's say you want to catch each line of output from foo.py as a variable i
 **baz.py:**
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
 
-proc = subprocess.Popen(['python','fake_chess_engine.py'],stdout=subprocess.PIPE)
+proc = subprocess.Popen(['python','foo.py'],stdout=subprocess.PIPE)
 
 while True:
   line = proc.stdout.readline()

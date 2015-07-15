@@ -120,7 +120,7 @@ for i in range(0,10):
 
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
 
-proc = subprocess.Popen(['python','fake_chess_engine.py'],stdin=subprocess.PIPE)
+proc = subprocess.Popen(['python','foo.py'],stdin=subprocess.PIPE)
 
 proc.communicate()
 </code></pre>
@@ -134,7 +134,7 @@ proc.communicate()
 
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
 
-proc = subprocess.Popen(['python','fake_chess_engine.py'],stdout=subprocess.PIPE)
+proc = subprocess.Popen(['python','foo.py'],stdout=subprocess.PIPE)
 
 while True:
   line = proc.stdout.readline()
