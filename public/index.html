@@ -9,7 +9,7 @@
   <meta name="author" content="Jeff Maxim">
 
   
-  <meta name="description" content="I&rsquo;ve finally defeated object oriented programming! Man, I never thought I&rsquo;d be able to use classes and objects in a project, but I &hellip;">
+  <meta name="description" content="Let&rsquo;s say you have two programs that need to communicate with eachother via stdin and stdout. Pipes is one way to accomplish this. A pipe is a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -31,6 +31,18 @@
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-54793829-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -71,6 +83,87 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/">subprocess.Popen: Using Python's Subprocess Module to Pipe Stdin and Stdout Between Processes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-15T12:04:14-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:04 pm</span></time>
+        
+           | <a href="/blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/#disqus_thread"
+             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Let&rsquo;s say you have two programs that need to communicate with eachother via stdin and stdout. <a href="http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html">Pipes</a> is one way to accomplish this. A pipe is a connection between two processes such that the stdout of one program becomes the stdin of the other.</p>
+
+<p>With python, this python process is streamlines with the <a href="https://docs.python.org/2/library/subprocess.html">subprocess module</a>.</p>
+
+<p>Let&rsquo;s look at an example of how this plays out in python. Take our first program, foo.py:</p>
+
+<p><strong>foo.py:</strong></p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import time
+import sys
+
+for i in range(0,10):
+    print &quot;Hello world &quot; + str(i)
+    sys.stdout.flush()
+    time.sleep(1)
+</code></pre>
+
+
+<p>All foo.py does is print &ldquo;Hello World&rdquo; with an iterator number, and it does this every second. This is our sample output. Now, let&rsquo;s imagine a second program that is trying to catch the stdout from foo.py as stdin. Let&rsquo;s make that second program called bar.py, and it will be based on <a href="https://docs.python.org/2/library/subprocess.html">python&rsquo;s subprocess module documentation</a>:</p>
+
+<p><strong>bar.py:</strong></p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
+
+proc = subprocess.Popen(['python','fake_chess_engine.py'],stdin=subprocess.PIPE)
+
+proc.communicate()
+</code></pre>
+
+
+<p>Running bar.py produces our desired result: it catches the stdout from foo.py, uses it as stdin, and prints &ldquo;Hello world&rdquo; plus an iterator to the console every second.</p>
+
+<p>Now, let&rsquo;s say you want to catch each line of output from foo.py as a variable in bar.py, and maybe save that output to a variable in bar.py. Let&rsquo;s write baz.py, based on <a href="https://docs.python.org/2/library/subprocess.html">this post from stackoverflow</a>, to accomplish that goal:</p>
+
+<p><strong>baz.py:</strong></p>
+
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
+
+proc = subprocess.Popen(['python','fake_chess_engine.py'],stdout=subprocess.PIPE)
+
+while True:
+  line = proc.stdout.readline()
+  if line != '':
+    print &quot;test: &quot;, line.rstrip()
+  else:
+    break
+</code></pre>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/07/10/recurse-center-day-4-and-5/">Recurse Center Day 4 and 5</a></h1>
     
     
@@ -81,6 +174,9 @@
 
 
 <time class='entry-date' datetime='2015-07-10T16:45:48-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:45 pm</span></time>
+        
+           | <a href="/blog/2015/07/10/recurse-center-day-4-and-5/#disqus_thread"
+             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/10/recurse-center-day-4-and-5/">Comments</a>
         
       </p>
     
@@ -131,6 +227,9 @@
 
 <time class='entry-date' datetime='2015-07-08T09:43:05-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:43 am</span></time>
         
+           | <a href="/blog/2015/07/08/recurse-center-day-3/#disqus_thread"
+             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/08/recurse-center-day-3/">Comments</a>
+        
       </p>
     
   </header>
@@ -171,6 +270,9 @@
 
 
 <time class='entry-date' datetime='2015-07-07T09:41:35-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:41 am</span></time>
+        
+           | <a href="/blog/2015/07/07/recurse-center-day-2/#disqus_thread"
+             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/07/recurse-center-day-2/">Comments</a>
         
       </p>
     
@@ -222,6 +324,9 @@
 
 
 <time class='entry-date' datetime='2015-07-06T14:18:42-04:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:18 pm</span></time>
+        
+           | <a href="/blog/2015/07/06/recurse-center-day-1/#disqus_thread"
+             data-disqus-identifier="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/06/recurse-center-day-1/">Comments</a>
         
       </p>
     
@@ -276,6 +381,10 @@ Meeting MRC kinda feels like I&rsquo;m meeting a celebrity. I did my RC skype in
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/">subprocess.Popen: Using Python's Subprocess Module to Pipe Stdin and Stdout Between Processes</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/07/10/recurse-center-day-4-and-5/">Recurse Center Day 4 and 5</a>
@@ -341,6 +450,19 @@ Meeting MRC kinda feels like I&rsquo;m meeting a celebrity. I did my RC skype in
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'jeffsrecursecenterblog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

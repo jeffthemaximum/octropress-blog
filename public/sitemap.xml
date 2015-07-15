@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/</loc>
+    <lastmod>2015-07-15T12:04:14-04:00</lastmod>
+  </url>
+  <url>
     <loc>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/10/recurse-center-day-4-and-5/</loc>
     <lastmod>2015-07-10T16:45:48-04:00</lastmod>
   </url>
@@ -30,5 +34,8 @@
   </url>
   <url>
     <loc>https://obscure-atoll-2224.herokuapp.com//blog/categories/magic/</loc>
+  </url>
+  <url>
+    <loc>https://obscure-atoll-2224.herokuapp.com//blog/categories/technical/</loc>
   </url>
 </urlset>
