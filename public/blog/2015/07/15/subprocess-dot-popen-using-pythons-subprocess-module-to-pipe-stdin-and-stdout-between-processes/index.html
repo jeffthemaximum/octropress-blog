@@ -145,7 +145,7 @@ while True:
 </code></pre>
 
 
-<p>You&rsquo;ll notice two key differences between bar.py and baz.py. First, baz.py uses a &ldquo;stdout&rdquo; arg in it&rsquo;s call to subpress.Popen, where bar.py uses a &ldquo;stdin&rdquo; arg here. Second, baz.py replaces bar.py&rsquo;s &ldquo;proc.communicate()&rdquo; call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.</p>
+<p>You&rsquo;ll notice two key differences between bar.py and baz.py. First, baz.py uses a &ldquo;stdout&rdquo; arg in it&rsquo;s call to subprocess.Popen, where bar.py uses a &ldquo;stdin&rdquo; arg here. Second, baz.py replaces bar.py&rsquo;s &ldquo;proc.communicate()&rdquo; call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.</p>
 
 <p>Any thoughts, questions, comments?</p>
 </div>

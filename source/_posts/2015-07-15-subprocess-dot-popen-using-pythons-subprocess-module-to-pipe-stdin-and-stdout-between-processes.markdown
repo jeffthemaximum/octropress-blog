@@ -49,6 +49,6 @@ while True:
     break
 </code></pre>
 
-You'll notice two key differences between bar.py and baz.py. First, baz.py uses a "stdout" arg in it's call to subpress.Popen, where bar.py uses a "stdin" arg here. Second, baz.py replaces bar.py's "proc.communicate()" call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.
+You'll notice two key differences between bar.py and baz.py. First, baz.py uses a "stdout" arg in it's call to subprocess.Popen, where bar.py uses a "stdin" arg here. Second, baz.py replaces bar.py's "proc.communicate()" call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.
 
 Any thoughts, questions, comments? 
