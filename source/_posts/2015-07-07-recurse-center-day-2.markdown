@@ -9,7 +9,7 @@ categories: [recurse updates]
 Day 2 at [Recurse Center](http://www.recurse.com/)!
 
 Felt a little bit like the second day of middle school. 
-
+<!--more-->
 {% img center http://rdemotivational.com/sites/default/files/user_uploaded/demotivation.us_First-day-of-school-vs-Second-day-of-school-_140843261511.jpg 350 350 %}
 
 I was still pretty pumped though. This place is great, and it got even better today.

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Technical | Jeff's Recurse Center Blog]]></title>
+  <title><![CDATA[Category: Technical | Jeff Maxim]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/technical/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-07-16T15:01:07-04:00</updated>
+  <updated>2015-07-16T15:14:18-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -19,6 +19,9 @@
     <updated>2015-07-15T12:04:14-04:00</updated>
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes</id>
     <content type="html"><![CDATA[<p>Let&rsquo;s say you have two programs that need to communicate with eachother via stdin and stdout. <a href="http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html">Pipes</a> is one way to accomplish this. A pipe is a connection between two processes such that the stdout of one program becomes the stdin of the other.</p>
+
+<!--more-->
+
 
 <p>With python, this piping process is streamlined with the <a href="https://docs.python.org/2/library/subprocess.html">subprocess module</a>.</p>
 

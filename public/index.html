@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Jeff's Recurse Center Blog</title>
+  <title>Jeff Maxim</title>
   <meta name="author" content="Jeff Maxim">
 
   
@@ -21,14 +21,15 @@
   <link rel="canonical" href="https://obscure-atoll-2224.herokuapp.com//">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Jeff's Recurse Center Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Jeff Maxim" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
   
   <script type="text/javascript">
@@ -48,7 +49,7 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">Jeff's Recurse Center Blog</a></h1>
+  <h1><a href="/">Jeff Maxim</a></h1>
   
     <h2>My experience at Recurse Center</h2>
   
@@ -108,58 +109,12 @@
 
   <div class="entry-content"><p>Let&rsquo;s say you have two programs that need to communicate with eachother via stdin and stdout. <a href="http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html">Pipes</a> is one way to accomplish this. A pipe is a connection between two processes such that the stdout of one program becomes the stdin of the other.</p>
 
-<p>With python, this piping process is streamlined with the <a href="https://docs.python.org/2/library/subprocess.html">subprocess module</a>.</p>
-
-<p>Let&rsquo;s look at an example of how this plays out in python. Take our first program, foo.py:</p>
-
-<p><strong>foo.py:</strong></p>
-
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import time
-import sys
-
-for i in range(0,10):
-    print &quot;Hello world &quot; + str(i)
-    sys.stdout.flush()
-    time.sleep(1)
-</code></pre>
-
-
-<p>All foo.py does is print &ldquo;Hello World&rdquo; with an iterator number, and it does this every second. This is our sample output. Now, let&rsquo;s imagine a second program that is trying to catch the stdout from foo.py as stdin. Let&rsquo;s make that second program called bar.py, and it will be based on <a href="https://docs.python.org/2/library/subprocess.html">python&rsquo;s subprocess module documentation</a>:</p>
-
-<p><strong>bar.py:</strong></p>
-
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
-
-proc = subprocess.Popen(['python','foo.py'],stdin=subprocess.PIPE)
-
-proc.communicate()
-</code></pre>
-
-
-<p>Running bar.py produces our desired result: it catches the stdout from foo.py, uses it as stdin, and prints &ldquo;Hello world&rdquo; plus an iterator to the console every second.</p>
-
-<p>Now, let&rsquo;s say you want to catch each line of output from foo.py as a variable in bar.py, and maybe save that output to a variable in bar.py. Let&rsquo;s write baz.py, based on <a href="https://docs.python.org/2/library/subprocess.html">this post from stackoverflow</a>, to accomplish that goal:</p>
-
-<p><strong>baz.py:</strong></p>
-
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
-
-proc = subprocess.Popen(['python','foo.py'],stdout=subprocess.PIPE)
-
-while True:
-  line = proc.stdout.readline()
-  if line != '':
-    print &quot;test: &quot;, line.rstrip()
-  else:
-    break
-</code></pre>
-
-
-<p>You&rsquo;ll notice two key differences between bar.py and baz.py. First, baz.py uses a &ldquo;stdout&rdquo; arg in it&rsquo;s call to subprocess.Popen, where bar.py uses a &ldquo;stdin&rdquo; arg here. Second, baz.py replaces bar.py&rsquo;s &ldquo;proc.communicate()&rdquo; call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.</p>
-
-<p>Any thoughts, questions, comments?</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -191,27 +146,12 @@ while True:
 
   <div class="entry-content"><p>I&rsquo;ve finally defeated object oriented programming! Man, I never thought I&rsquo;d be able to use classes and objects in a project, but I finally got a basic OOP-style tic tac toe game to work in python. <a href="https://github.com/jeffthemaximum/python-tic-tac-toe">Check it out here</a>.</p>
 
-<p><img src="/images/photo (4).JPG" height="300" width="250" align="middle" /></p>
-
-<p>This was the article that finally helped my understand OOP in python: <a href="http://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">Improve Your Python: Python Classes and Object Oriented Programming</a>. Thanks to Aagje for pointing me to that article!</p>
-
-<p>Friday was kind of a quick day for me, but I learned a lot. I went to a <a href="https://git-scm.com/">git</a> workshop with <a href="https://twitter.com/ballingt">Tom</a> all morning, and it was a big help. Tom is like a ninja programmer, and it&rsquo;s kind of hard to keep up with his lightening quick ninja skills sometimes, especially for a pink belt like me. But, he imparted some serious git knowledge during this session, and I&rsquo;m glad I went. I solidified my basic git knowledge, which should come in helpful for keeping my blog from crashing again!</p>
-
-<p>OOP has been beating me up for the last few days, but I decided to finally conquer it. I want to learn how to use OOP-style in my coding, and I just haven&rsquo;t been able to do it for a while now. On Thursday, I got started on a simple, OOP style tic tact toe game, but then I left early with <a href="http://emilyelizabethcooksandstuff.blogspot.com/">Emily</a> to go to a friend&rsquo;s wedding in Jersey, so I had to leave my game for the day.</p>
-
-<p>On Friday, I picked back up with tic tac toe, and I got it to work! Go Jeff!</p>
-
-<p>I&rsquo;ve been coding for about 2 years now, with my most solid learning happening in the past 10 months or so. Learning to do more and more with programming is addicting. You learn a little, use it, make something new, and you see your effort pay off in results. That effort &ndash;> results loop gets addicting! You keep learning more, and you can do more, and you just want to learn more and more!</p>
-
-<p>This successful stab at OOP programming in python with my tic tac toe game showed me yet again that if I put in the effort, I can keep learning harder and harder programming concepts!</p>
-
-<p>Friday is optional at RC, so I ended up not going in. I still did a bunch of coding at home, including reviving my crashed blog and finishing that tic tac toe game. But, I also went to the Women&rsquo;s World Cup US National Team ticker tape parade on Wall Street with Emily and Lisa!</p>
-
-<p><img src="/images/parade.jpg" height="500" width="450" align="middle" /></p>
-
-<p>The coding is addicting, but it&rsquo;s your friends and family that matter most. Sometimes, ya gotta break yourself away from that screen and hang out with some cool peeps.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/10/recurse-center-day-4-and-5/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -243,19 +183,12 @@ while True:
 
   <div class="entry-content"><p>Day 3 was a whirlwind! Two days behind me, and RC already feels pretty magical. That&rsquo;s not a metaphor. I kind of feel like I&rsquo;m at Hogwarts and I&rsquo;m learning magic spells, just like Harry, Rupert, and Hermione.</p>
 
-<p><img src="/images/harry.jpg" /></p>
-
-<p>Everytime I learn some new python syntax, or some new git commands, or I get my blog to do something I didn&rsquo;t know how to do before, I feel just like a Hogwarts student who has learned some new magical spell. <a href="https://youtu.be/nKIu9yen5nc?t=4m51s">Getting code to work really does feel like a magical superpower!</a></p>
-
-<p>What&rsquo;d I do today? Well, I crashed my blog! I got it back up and running now though. I actually wrote a whole day 3 post at some point, but I lost it. It&rsquo;s somewhere in my various git commit&rsquo;s, but I don&rsquo;t feel like searching back through them to see which has it :-/</p>
-
-<p>I battled object oriented programming in python, and I lost. OOP is like this ceiling that I just can&rsquo;t get past, but I&rsquo;ll bust through eventually, cuz I&rsquo;m smart!</p>
-
-<p>I did a bunch of puzzle style challenges at <a href="http://www.codeeval.com">CodeEval</a>.</p>
-
-<p>I learned a bunch of other stuff, too, but I can&rsquo;t remember what I learned now! I&rsquo;d been keeping a hand-written notebook with scratched out notes about what I&rsquo;d learned each day. It was a great way to document everything I&rsquo;d learned each day. You stay so engaged and busy at RC, it&rsquo;s easy to forget just how much you grow everyday. But, writing a little note to yourself everytime you learn something new is a good way to record just how much you&rsquo;ve grown everyday. Unfortunately, I lost my list! I think I&rsquo;ll start up a Google Doc next week, which should be harder to lose.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/08/recurse-center-day-3/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -289,27 +222,12 @@ while True:
 
 <p>Felt a little bit like the second day of middle school.</p>
 
-<p><img class="center" src="http://rdemotivational.com/sites/default/files/user_uploaded/demotivation.us_First-day-of-school-vs-Second-day-of-school-_140843261511.jpg" width="350" height="350"></p>
-
-<p>I was still pretty pumped though. This place is great, and it got even better today.</p>
-
-<p>I jumped into learning some <a href="https://www.python.org/">python</a> right away. I&rsquo;ve got the goal of building a chess browser interface that uses <a href="http://www.gnu.org/software/xboard/">XBoard</a> compatible chess engines, and I want to use python to handle all the logic. I don&rsquo;t know much python, so that&rsquo;s what I worked on all day!</p>
-
-<p><strong><em>The Best Part Of Recurse Center So Far</em></strong></p>
-
-<p>The people.</p>
-
-<p>The physical space is cool. It&rsquo;s great that it&rsquo;s pretty quiet and the&rsquo;re no kids shouting and fighting. Having unlimited time to work on programming is amazing.</p>
-
-<p>But, the people are what makes this place.</p>
-
-<p><strong><em>An example:</em></strong> Being relatively unfamiliar with python, I didn&rsquo;t know how to debug the various programs I was working on. I googled for the answer for a while, and found some decent resources, but struggled to understand any of them. I went and met with an RC facilitator, <a href="https://twitter.com/ballingt">Thomas Ballinger</a> for some help. He showed me a really cool visual debugger called <a href="https://pypi.python.org/pypi/pudb">pudb</a>.</p>
-
-<p>This is the reason I came to RC. Previously, it&rsquo;d just been me at my computer, trying to learn to code by reading the interwebz. Now, I get to hang out with smart, real-life people! It&rsquo;s such a different experience to be able to collaborate with bright, hard-working programmers, bouncing ideas and tips around, and getting inspiration from some really intelligent people. I kinda feel like I&rsquo;m back at <a href="http://www.swarthmore.edu">Swarthmore College</a></p>
-
-<p>Can&rsquo;t wait for day 3!</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/07/recurse-center-day-2/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -341,36 +259,14 @@ while True:
 
   <div class="entry-content"><p>Today was my first day at Recurse Center!</p>
 
-<p>I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.
-<img src="http://i.imgur.com/f89JQLw.jpg/890/280">
-Lisa loves some watermelon!</p>
-
-<p>I&rsquo;m hoping someone reads my blogs, so I&rsquo;m going to try to keep them short, entertaining, and accessible. With that in mind, here&rsquo;s my top three moments from my first day:</p>
-
-<p><strong>1) Lunch Break:</strong>
-I&rsquo;m a middle school public school teacher in NYC. I haven&rsquo;t had a lunch break without children or meetings or planning or grading in my whole professional life. Today, I got an hour lunch break, and went to a pretty tasty local sandwich spot, and I went with some of my new Recurse Center (RC) friends. They were smart, social, the food was tasty, and there were no kids or meetings. This was my best hightlight from the day.</p>
-
-<p><strong>2) I found my project:</strong>
-My brother Mike, general manager, CTO, and general badass at OKcupid, is the smartest programmer I know. I started chatting him up around 6pm today, late in my first day at RC, and he tipped me off to an exciting project I can work on for maybe my whole 12 weeks at RC. I&rsquo;m going to pull <a href="http://www.gnu.org/software/xboard/">XBoard</a> compatible chess engines into a browser for human users to play against. It&rsquo;ll take some serious Python and Javascript code to make this run, but I&rsquo;m smart, so I can do it.</p>
-
-<p><strong>3) Meeting with <a href="http://maryrosecook.com/">Mary Rose Cook</a>:</strong>
-Meeting MRC kinda feels like I&rsquo;m meeting a celebrity. I did my RC skype interview with MRC, and I&rsquo;ve also read a bunch of her articles before coming to RC. I got stuck on a github issue midday today, and I knew MRC is a github ninja. I walked over to her to see if she could help me out (of course she could!). Not only did she help me with the steps to solve my github issue, she gave me a whole under-the-hood understanding of what I was trying to do. This is why I came to RC: To learn from brilliant programmers. To learn programming at a foudational level. To be inspired by someone brilliant. This happened to me already on day 1.</p>
-
-<p>That&rsquo;s just my top three moments, but the whole day was a blast. I can&rsquo;t wait for the next twelve weeks!</p>
-
-<p><strong>Tip of the day:</strong></p>
-
-<p>MRC gave a speech at the beginning of the day with her top four tips for your time at RC. Her tips were:</p>
-
-<ul>
-<li>Dive deep</li>
-<li>Debug systematically</li>
-<li>Know your tools</li>
-<li>Learn one language really well</li>
-</ul>
+<p>I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.</p>
 
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/06/recurse-center-day-1/">Read on &rarr;</a>
+    </footer>
   
 
 

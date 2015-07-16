@@ -8,7 +8,8 @@ categories: [blogging, recurse updates]
 
 Today was my first day at Recurse Center!
 
-I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day. 
+I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.
+<!--more-->
 {% img http://i.imgur.com/f89JQLw.jpg/890/280 %}
 Lisa loves some watermelon!
 

@@ -7,7 +7,7 @@ categories: technical
 ---
 
 Let's say you have two programs that need to communicate with eachother via stdin and stdout. [Pipes](http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html) is one way to accomplish this. A pipe is a connection between two processes such that the stdout of one program becomes the stdin of the other.
-
+<!--more-->
 With python, this piping process is streamlined with the [subprocess module](https://docs.python.org/2/library/subprocess.html). 
 
 Let's look at an example of how this plays out in python. Take our first program, foo.py: 

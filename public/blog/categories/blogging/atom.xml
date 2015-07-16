@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Blogging | Jeff's Recurse Center Blog]]></title>
+  <title><![CDATA[Category: Blogging | Jeff Maxim]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/blogging/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-07-16T15:01:07-04:00</updated>
+  <updated>2015-07-16T15:14:18-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -20,8 +20,12 @@
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/06/recurse-center-day-1</id>
     <content type="html"><![CDATA[<p>Today was my first day at Recurse Center!</p>
 
-<p>I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.
-<img class="<a" src="href="http://i.imgur.com/f89JQLw.jpg/890/280">http://i.imgur.com/f89JQLw.jpg/890/280</a>">
+<p>I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.</p>
+
+<!--more-->
+
+
+<p><img class="<a" src="href="http://i.imgur.com/f89JQLw.jpg/890/280">http://i.imgur.com/f89JQLw.jpg/890/280</a>">
 Lisa loves some watermelon!</p>
 
 <p>I&rsquo;m hoping someone reads my blogs, so I&rsquo;m going to try to keep them short, entertaining, and accessible. With that in mind, here&rsquo;s my top three moments from my first day:</p>

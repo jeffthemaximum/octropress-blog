@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Recurse Updates | Jeff's Recurse Center Blog]]></title>
+  <title><![CDATA[Category: Recurse Updates | Jeff Maxim]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/recurse-updates/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-07-16T15:01:07-04:00</updated>
+  <updated>2015-07-16T15:14:18-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -19,6 +19,9 @@
     <updated>2015-07-10T16:45:48-04:00</updated>
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/10/recurse-center-day-4-and-5</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve finally defeated object oriented programming! Man, I never thought I&rsquo;d be able to use classes and objects in a project, but I finally got a basic OOP-style tic tac toe game to work in python. <a href="https://github.com/jeffthemaximum/python-tic-tac-toe">Check it out here</a>.</p>
+
+<!--more-->
+
 
 <p><img src="/images/photo (4).JPG" height="300" width="250" align="middle" /></p>
 
@@ -49,6 +52,9 @@
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/08/recurse-center-day-3</id>
     <content type="html"><![CDATA[<p>Day 3 was a whirlwind! Two days behind me, and RC already feels pretty magical. That&rsquo;s not a metaphor. I kind of feel like I&rsquo;m at Hogwarts and I&rsquo;m learning magic spells, just like Harry, Rupert, and Hermione.</p>
 
+<!--more-->
+
+
 <p><img src="/images/harry.jpg" /></p>
 
 <p>Everytime I learn some new python syntax, or some new git commands, or I get my blog to do something I didn&rsquo;t know how to do before, I feel just like a Hogwarts student who has learned some new magical spell. <a href="https://youtu.be/nKIu9yen5nc?t=4m51s">Getting code to work really does feel like a magical superpower!</a></p>
@@ -71,6 +77,9 @@
     <content type="html"><![CDATA[<p>Day 2 at <a href="http://www.recurse.com/">Recurse Center</a>!</p>
 
 <p>Felt a little bit like the second day of middle school.</p>
+
+<!--more-->
+
 
 <p><img class="center <a" src="href="http://rdemotivational.com/sites/default/files/user_uploaded/demotivation.us_First-day-of-school-vs-Second-day-of-school-_140843261511.jpg">http://rdemotivational.com/sites/default/files/user_uploaded/demotivation.us_First-day-of-school-vs-Second-day-of-school-_140843261511.jpg</a>" width="350" height="350"></p>
 
@@ -101,8 +110,12 @@
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/06/recurse-center-day-1</id>
     <content type="html"><![CDATA[<p>Today was my first day at Recurse Center!</p>
 
-<p>I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.
-<img class="<a" src="href="http://i.imgur.com/f89JQLw.jpg/890/280">http://i.imgur.com/f89JQLw.jpg/890/280</a>">
+<p>I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.</p>
+
+<!--more-->
+
+
+<p><img class="<a" src="href="http://i.imgur.com/f89JQLw.jpg/890/280">http://i.imgur.com/f89JQLw.jpg/890/280</a>">
 Lisa loves some watermelon!</p>
 
 <p>I&rsquo;m hoping someone reads my blogs, so I&rsquo;m going to try to keep them short, entertaining, and accessible. With that in mind, here&rsquo;s my top three moments from my first day:</p>

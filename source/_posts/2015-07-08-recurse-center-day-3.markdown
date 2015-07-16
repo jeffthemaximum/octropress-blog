@@ -7,7 +7,7 @@ categories: [magic, recurse updates]
 ---
 
 Day 3 was a whirlwind! Two days behind me, and RC already feels pretty magical. That's not a metaphor. I kind of feel like I'm at Hogwarts and I'm learning magic spells, just like Harry, Rupert, and Hermione. 
-
+<!--more-->
 <img src="{{ root_url }}/images/harry.jpg" />
 
 Everytime I learn some new python syntax, or some new git commands, or I get my blog to do something I didn't know how to do before, I feel just like a Hogwarts student who has learned some new magical spell. [Getting code to work really does feel like a magical superpower!](https://youtu.be/nKIu9yen5nc?t=4m51s)

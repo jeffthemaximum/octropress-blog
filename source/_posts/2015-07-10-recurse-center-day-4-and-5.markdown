@@ -7,7 +7,7 @@ categories: [recurse updates]
 ---
 
 I've finally defeated object oriented programming! Man, I never thought I'd be able to use classes and objects in a project, but I finally got a basic OOP-style tic tac toe game to work in python. [Check it out here](https://github.com/jeffthemaximum/python-tic-tac-toe).
-
+<!--more-->
 <img src="{{ root_url }}/images/photo (4).JPG" height="300" width="250" align="middle" />
 
 This was the article that finally helped my understand OOP in python: [Improve Your Python: Python Classes and Object Oriented Programming](http://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/). Thanks to Aagje for pointing me to that article!
