@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jeff's Recurse Center Blog]]></title>
-  <link href="https://obscure-atoll-2224.herokuapp.com//atom.xml" rel="self"/>
+  <title><![CDATA[Category: Recurse Updates | Jeff's Recurse Center Blog]]></title>
+  <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/recurse-updates/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
   <updated>2015-07-16T15:01:07-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
@@ -14,73 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[subprocess.Popen: Using Python's Subprocess Module to Pipe Stdin and Stdout Between Processes]]></title>
-    <link href="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/"/>
-    <updated>2015-07-15T12:04:14-04:00</updated>
-    <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes</id>
-    <content type="html"><![CDATA[<p>Let&rsquo;s say you have two programs that need to communicate with eachother via stdin and stdout. <a href="http://www2.cs.uregina.ca/~hamilton/courses/330/notes/unix/pipes/pipes.html">Pipes</a> is one way to accomplish this. A pipe is a connection between two processes such that the stdout of one program becomes the stdin of the other.</p>
-
-<p>With python, this piping process is streamlined with the <a href="https://docs.python.org/2/library/subprocess.html">subprocess module</a>.</p>
-
-<p>Let&rsquo;s look at an example of how this plays out in python. Take our first program, foo.py:</p>
-
-<p><strong>foo.py:</strong></p>
-
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import time
-import sys
-
-for i in range(0,10):
-    print &quot;Hello world &quot; + str(i)
-    sys.stdout.flush()
-    time.sleep(1)
-</code></pre>
-
-
-<p>All foo.py does is print &ldquo;Hello World&rdquo; with an iterator number, and it does this every second. This is our sample output. Now, let&rsquo;s imagine a second program that is trying to catch the stdout from foo.py as stdin. Let&rsquo;s make that second program called bar.py, and it will be based on <a href="https://docs.python.org/2/library/subprocess.html">python&rsquo;s subprocess module documentation</a>:</p>
-
-<p><strong>bar.py:</strong></p>
-
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
-
-proc = subprocess.Popen(['python','foo.py'],stdin=subprocess.PIPE)
-
-proc.communicate()
-</code></pre>
-
-
-<p>Running bar.py produces our desired result: it catches the stdout from foo.py, uses it as stdin, and prints &ldquo;Hello world&rdquo; plus an iterator to the console every second.</p>
-
-<p>Now, let&rsquo;s say you want to catch each line of output from foo.py as a variable in bar.py, and maybe save that output to a variable in bar.py. Let&rsquo;s write baz.py, based on <a href="https://docs.python.org/2/library/subprocess.html">this post from stackoverflow</a>, to accomplish that goal:</p>
-
-<p><strong>baz.py:</strong></p>
-
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import subprocess
-
-proc = subprocess.Popen(['python','foo.py'],stdout=subprocess.PIPE)
-
-while True:
-  line = proc.stdout.readline()
-  if line != '':
-    print &quot;test: &quot;, line.rstrip()
-  else:
-    break
-</code></pre>
-
-
-<p>You&rsquo;ll notice two key differences between bar.py and baz.py. First, baz.py uses a &ldquo;stdout&rdquo; arg in it&rsquo;s call to subprocess.Popen, where bar.py uses a &ldquo;stdin&rdquo; arg here. Second, baz.py replaces bar.py&rsquo;s &ldquo;proc.communicate()&rdquo; call with a while-block. This while-block in baz.py accomplishes our goal of collecting each line of output from foo.py in a variable. With baz.py, we just print that variable out. However, you could presumably append that line to a list and save all your line variables in this way.</p>
-
-<p>Any thoughts, questions, comments?</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Recurse Center Day 4 and 5]]></title>
     <link href="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/10/recurse-center-day-4-and-5/"/>
     <updated>2015-07-10T16:45:48-04:00</updated>
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/10/recurse-center-day-4-and-5</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve finally defeated object oriented programming! Man, I never thought I&rsquo;d be able to use classes and objects in a project, but I finally got a basic OOP-style tic tac toe game to work in python. <a href="https://github.com/jeffthemaximum/python-tic-tac-toe">Check it out here</a>.</p>
 
-<p><img src="https://obscure-atoll-2224.herokuapp.com//images/photo (4).JPG" height="300" width="250" align="middle" /></p>
+<p><img src="/images/photo (4).JPG" height="300" width="250" align="middle" /></p>
 
 <p>This was the article that finally helped my understand OOP in python: <a href="http://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">Improve Your Python: Python Classes and Object Oriented Programming</a>. Thanks to Aagje for pointing me to that article!</p>
 
@@ -96,7 +36,7 @@ while True:
 
 <p>Friday is optional at RC, so I ended up not going in. I still did a bunch of coding at home, including reviving my crashed blog and finishing that tic tac toe game. But, I also went to the Women&rsquo;s World Cup US National Team ticker tape parade on Wall Street with Emily and Lisa!</p>
 
-<p><img src="https://obscure-atoll-2224.herokuapp.com//images/parade.jpg" height="500" width="450" align="middle" /></p>
+<p><img src="/images/parade.jpg" height="500" width="450" align="middle" /></p>
 
 <p>The coding is addicting, but it&rsquo;s your friends and family that matter most. Sometimes, ya gotta break yourself away from that screen and hang out with some cool peeps.</p>
 ]]></content>
@@ -109,7 +49,7 @@ while True:
     <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/08/recurse-center-day-3</id>
     <content type="html"><![CDATA[<p>Day 3 was a whirlwind! Two days behind me, and RC already feels pretty magical. That&rsquo;s not a metaphor. I kind of feel like I&rsquo;m at Hogwarts and I&rsquo;m learning magic spells, just like Harry, Rupert, and Hermione.</p>
 
-<p><img src="https://obscure-atoll-2224.herokuapp.com//images/harry.jpg" /></p>
+<p><img src="/images/harry.jpg" /></p>
 
 <p>Everytime I learn some new python syntax, or some new git commands, or I get my blog to do something I didn&rsquo;t know how to do before, I feel just like a Hogwarts student who has learned some new magical spell. <a href="https://youtu.be/nKIu9yen5nc?t=4m51s">Getting code to work really does feel like a magical superpower!</a></p>
 
@@ -132,7 +72,7 @@ while True:
 
 <p>Felt a little bit like the second day of middle school.</p>
 
-<p><img class="center" src="http://rdemotivational.com/sites/default/files/user_uploaded/demotivation.us_First-day-of-school-vs-Second-day-of-school-_140843261511.jpg" width="350" height="350"></p>
+<p><img class="center <a" src="href="http://rdemotivational.com/sites/default/files/user_uploaded/demotivation.us_First-day-of-school-vs-Second-day-of-school-_140843261511.jpg">http://rdemotivational.com/sites/default/files/user_uploaded/demotivation.us_First-day-of-school-vs-Second-day-of-school-_140843261511.jpg</a>" width="350" height="350"></p>
 
 <p>I was still pretty pumped though. This place is great, and it got even better today.</p>
 
@@ -162,7 +102,7 @@ while True:
     <content type="html"><![CDATA[<p>Today was my first day at Recurse Center!</p>
 
 <p>I was more excited than my niece, Lisa, with a fresh piece of watermelon on a hot day.
-<img src="http://i.imgur.com/f89JQLw.jpg/890/280">
+<img class="<a" src="href="http://i.imgur.com/f89JQLw.jpg/890/280">http://i.imgur.com/f89JQLw.jpg/890/280</a>">
 Lisa loves some watermelon!</p>
 
 <p>I&rsquo;m hoping someone reads my blogs, so I&rsquo;m going to try to keep them short, entertaining, and accessible. With that in mind, here&rsquo;s my top three moments from my first day:</p>

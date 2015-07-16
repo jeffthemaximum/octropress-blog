@@ -3,7 +3,7 @@ layout: post
 title: "Recurse Center Day 2"
 date: 2015-07-07 09:41:35 -0400
 comments: true
-categories: 
+categories: [recurse updates]
 ---
 
 Day 2 at [Recurse Center](http://www.recurse.com/)!

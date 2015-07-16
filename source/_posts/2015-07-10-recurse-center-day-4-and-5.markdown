@@ -3,7 +3,7 @@ layout: post
 title: "Recurse Center Day 4 and 5"
 date: 2015-07-10 16:45:48 -0400
 comments: true
-categories: 
+categories: [recurse updates]
 ---
 
 I've finally defeated object oriented programming! Man, I never thought I'd be able to use classes and objects in a project, but I finally got a basic OOP-style tic tac toe game to work in python. [Check it out here](https://github.com/jeffthemaximum/python-tic-tac-toe).

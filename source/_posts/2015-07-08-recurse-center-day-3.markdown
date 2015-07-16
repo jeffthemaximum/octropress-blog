@@ -3,7 +3,7 @@ layout: post
 title: "Recurse Center Day 3"
 date: 2015-07-08 09:43:05 -0400
 comments: true
-categories: magic
+categories: [magic, recurse updates]
 ---
 
 Day 3 was a whirlwind! Two days behind me, and RC already feels pretty magical. That's not a metaphor. I kind of feel like I'm at Hogwarts and I'm learning magic spells, just like Harry, Rupert, and Hermione. 
