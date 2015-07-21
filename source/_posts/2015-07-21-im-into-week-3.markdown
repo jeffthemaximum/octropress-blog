@@ -3,7 +3,7 @@ layout: post
 title: "Week 3 Random Thoughts"
 date: 2015-07-21 14:18:33 -0400
 comments: true
-categories: 
+categories: [recurse updates]
 ---
 
 1) I watched The Second Best Exotic Marigold Hotel the other night with [Emily](http://emilyelizabethcooksandstuff.blogspot.com/), and it was a really solid movie. If you've never seen either of these, you should check them out. Maggie Smith is a living God.

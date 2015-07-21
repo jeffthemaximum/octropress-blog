@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Recurse Updates | Jeff Maxim]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/recurse-updates/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-07-21T14:53:14-04:00</updated>
+  <updated>2015-07-21T14:53:47-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Week 3 Random Thoughts]]></title>
+    <link href="https://obscure-atoll-2224.herokuapp.com//blog/2015/07/21/im-into-week-3/"/>
+    <updated>2015-07-21T14:18:33-04:00</updated>
+    <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/07/21/im-into-week-3</id>
+    <content type="html"><![CDATA[<p>1) I watched The Second Best Exotic Marigold Hotel the other night with <a href="http://emilyelizabethcooksandstuff.blogspot.com/">Emily</a>, and it was a really solid movie. If you&rsquo;ve never seen either of these, you should check them out. Maggie Smith is a living God.</p>
+
+<!--more-->
+
+
+<p><img class="center <a" src="href="http://ecx.images-amazon.com/images/I/81eKhRdfg7L._SL1500_.jpg">http://ecx.images-amazon.com/images/I/81eKhRdfg7L._SL1500_.jpg</a>" width="350" height="350"></p>
+
+<p>2) My experience at <a href="www.recurse.com">Recurse Center</a> is so subtantially different from my daily life as a middle school teacher in Inwood, I can&rsquo;t leave the many ways unspoken. I saw a celebrity, Jesse Palmer, the other day while walking to RC (never seen a celebrity in Inwood). There&rsquo;s constantly tourist and tour busses going up and down the street (no tour busses venture into Inwood). I get to sit all day at RC (ya rarely sit as a middle school teacher). And, it&rsquo;s so quiet here at RC, just a few quiet conversations while most RCers work on their projects (I think I&rsquo;ve experienced hearing damage as a middle school teacher). I get a lunch break, and I can go out to buy lunch if I want to (no time for lunch breaks when you&rsquo;re teaching).</p>
+
+<p>3) I got my chess program to a BASIC level of functionality, which I was so proud of! Simply, I&rsquo;ve got three parts to this project: 1) a c++ chess engine, 2) a browser flask app with a javascript chess board, 3) a python program to communicate with both the js chessboard and the c++ engine. I drew an awesome picture to demonstrate what I&rsquo;ve done so far with this thing:
+<img class="center <a" src="href="http://i.imgur.com/9cr4QFB.jpg">http://i.imgur.com/9cr4QFB.jpg</a>" width="350" height="350"></p>
+
+<p>I take pride in my ability to simplify a complex comcept into a picture, but I think even this picture isn&rsquo;t quite understandable enough. I&rsquo;ve never done a coding project with this many moving parts before, so I&rsquo;m proud that it&rsquo;s all working! The &ldquo;user&rdquo; is my diagram can play chess in a browser against the <a href="http://www.gnu.org/software/chess/">gnuchess engine</a> (who&rsquo;s the &ldquo;chess engine&rdquo; in my diagram"). The middle &ldquo;python code&rdquo; part was all written by me, and I&rsquo;m getting the python code running in the browser with some ajax, javascript, jQuery, and python&rsquo;s flask framework. Go me!</p>
+
+<p>4) I&rsquo;ve been trying to split my blog up into &ldquo;fun&rdquo; posts (which this one is) and &ldquo;technical&rdquo; posts, like <a href="https://obscure-atoll-2224.herokuapp.com/blog/2015/07/15/subprocess-dot-popen-using-pythons-subprocess-module-to-pipe-stdin-and-stdout-between-processes/">this one</a>. You can see I even linked to the two different types in the navigation bar at the top of the site. Fun posts are just updates about me, my RC experience, and some quick updates about my projects. Technical posts are written for programmers and are on some coding-specific topic. Basically, <a href="http://bikerchickswc.blogspot.com/">my mom</a>, a non-programmer, can enjoy the &ldquo;fun&rdquo; posts, and <a href="http://www.mmaxim.org/">my brother</a> could read the &ldquo;technical&rdquo; posts.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Recurse Center Day 4 and 5]]></title>
