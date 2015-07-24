@@ -102,26 +102,26 @@
   </header>
 
 
-<div class="entry-content"><p>I&rsquo;ve got a URL shortening website like <a href="www.bitly.com">Bitly</a> that allows you to submit a link, then gives you a new, hopefully shorter url to use for that link. I built it with Python and the <a href="http://flask.pocoo.org/">Flask microframework</a>.</p>
+<div class="entry-content"><p>I&rsquo;ve got a URL shortening website like <a href="http://www.bitly.com">Bitly</a> that allows you to submit a link, then gives you a new, hopefully shorter url to use for that link. I built it with Python and the <a href="http://flask.pocoo.org/">Flask microframework</a>.</p>
 
 <!-- more -->
 
 
-<p>You can checkout the live site here: <a href="tinyjeff.herokuapp.com">tinyjeff.herokuapp.com</a>.</p>
+<p>You can checkout the live site here: <a href="http://tinyjeff.herokuapp.com">tinyjeff.herokuapp.com</a>.</p>
 
-<p>Right now, a user enters a URL at my flask app, such as &ldquo;www.jeffreymaxim.com&rdquo;. My python code will generate a random key for that site, such as &ldquo;b42bRX60&rdquo;. It will store both the original URL and the key in a python dictionary like so:</p>
+<p>Right now, a user enters a URL at my flask app, such as &ldquo;www.jeffreymaxim.com&rdquo;. My python code will generate a random key for that site, such as &ldquo;98rDv64O&rdquo;. It will store both the original URL and the key in a python dictionary like so:</p>
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>my_links[&quot;www.jeffreymaxim.com&quot;] = &quot;b42bRX60&quot;
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>my_links[&quot;www.jeffreymaxim.com&quot;] = &quot;98rDv64O&quot;
 </code></pre>
 
 
 <p>So that I&rsquo;ve got an entry in the my_links dictionary that looks like this:</p>
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>{'www.jeffreymaxim.com': 'b42bRX60'}
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>{'www.jeffreymaxim.com': '98rDv64O'}
 </code></pre>
 
 
-<p>This code allows me to redirect a user from <a href="tinyjeff.herokuapp.com/b42bRX60">tinyjeff.herokuapp.com/b42bRX60</a> to <a href="www.jeffreymaxim.com">www.jeffreymaxim.com</a>.</p>
+<p>This code allows me to redirect a user from <a href="http://tinyjeff.herokuapp.com/98rDv64O">http://tinyjeff.herokuapp.com/98rDv64O</a> to <a href="http://www.jeffreymaxim.com">www.jeffreymaxim.com</a>.</p>
 
 <p>The problem here is that this dictionary only lives in the local memory of my machine while my app is running. As soon as I restart my server, that whole dictionary and all my links and keys gets deleted.</p>
 
@@ -231,13 +231,13 @@ def update_hits(key):
 
 <p>Before I had my SQLite3 database, my main python code would insert URL&rsquo;s and key&rsquo;s into a dictionary. Now we need to replace that logic with python code that enters the URL&rsquo;s and keys into the database.</p>
 
-<p>When a user enters a URL into <a href="tinyjeff.herokuapp.com">tinyjeff.herokuapp.com</a>, I know enter that URL and key into my database by executing the insert_url function described above:</p>
+<p>When a user enters a URL into <a href="http://tinyjeff.herokuapp.com">tinyjeff.herokuapp.com</a>, I know enter that URL and key into my database by executing the insert_url function described above:</p>
 
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>models.insert_link(key, url, 0)
 </code></pre>
 
 
-<p>Now, when a user enters <a href="www.jeffreymaxim.com">www.jeffreymaxim.com</a> to my website, and my python code generates a key of &ldquo;b42bRX60&rdquo;, this insert_key function will insert the URL and key into my database as rows. The 0 parameter in the insert_key function tells my database that this URL initially has zero hits.</p>
+<p>Now, when a user enters <a href="http://www.jeffreymaxim.com">www.jeffreymaxim.com</a> to my website, and my python code generates a key of &ldquo;98rDv64O&rdquo;, this insert_key function will insert the URL and key into my database as rows. The 0 parameter in the insert_key function tells my database that this URL initially has zero hits.</p>
 
 <p>The query function described above and the update_hits function described above can similarly be used to lookup information from my database and to update information in my database when this is required.</p>
 
