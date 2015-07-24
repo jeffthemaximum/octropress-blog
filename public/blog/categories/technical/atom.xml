@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technical | Jeff Maxim]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/technical/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-07-24T14:15:21-04:00</updated>
+  <updated>2015-07-24T14:19:56-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -33,7 +33,7 @@
 
 <p>So that I&rsquo;ve got an entry in the my_links dictionary that looks like this:</p>
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>{'www.jeffreymaxim.com': 'b42bRX60'
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>{'www.jeffreymaxim.com': 'b42bRX60'}
 </code></pre>
 
 
@@ -116,7 +116,7 @@ def update_hits(key):
 
 <p>If we just look at the insert_link function and go through it line-by-line&hellip;</p>
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>with sql.connect(&amp;quot;database.db&amp;quot;) as con:
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>with sql.connect(&quot;database.db&quot;) as con:
 </code></pre>
 
 
@@ -128,7 +128,7 @@ def update_hits(key):
 
 <p>Creates a cursor object called &ldquo;cur&rdquo;.</p>
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>cur.execute(&amp;quot;INSERT INTO link (key,url,hits) VALUES (?,?,?)&amp;quot;, (key,url,hits))
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>cur.execute(&quot;INSERT INTO link (key,url,hits) VALUES (?,?,?)&quot;, (key,url,hits))
 </code></pre>
 
 

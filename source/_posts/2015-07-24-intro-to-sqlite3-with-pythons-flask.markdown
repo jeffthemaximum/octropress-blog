@@ -16,7 +16,7 @@ Right now, a user enters a URL at my flask app, such as "www.jeffreymaxim.com". 
 
 So that I've got an entry in the my_links dictionary that looks like this:
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>{'www.jeffreymaxim.com': 'b42bRX60'
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>{'www.jeffreymaxim.com': 'b42bRX60'}
 </code></pre>
 
 This code allows me to redirect a user from [tinyjeff.herokuapp.com/b42bRX60](tinyjeff.herokuapp.com/b42bRX60) to [www.jeffreymaxim.com](www.jeffreymaxim.com).
@@ -86,13 +86,13 @@ def update_hits(key):
 
 If we just look at the insert_link function and go through it line-by-line...
 
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>with sql.connect(&amp;quot;database.db&amp;quot;) as con:
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>with sql.connect(&quot;database.db&quot;) as con:
 </code></pre>
 This connects to the SQL database.
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>cur = con.cursor()
 </code></pre>
 Creates a cursor object called "cur".
-<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>cur.execute(&amp;quot;INSERT INTO link (key,url,hits) VALUES (?,?,?)&amp;quot;, (key,url,hits))
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>cur.execute(&quot;INSERT INTO link (key,url,hits) VALUES (?,?,?)&quot;, (key,url,hits))
 </code></pre>
 This line executes our SQL statement and sends it to the database.
 <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>con.close()
