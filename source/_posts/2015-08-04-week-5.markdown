@@ -4,21 +4,23 @@ title: "Week 5!"
 date: 2015-08-04 18:03:50 -0400
 comments: true
 categories: [recurse updates]
+published= true
 ---
 
 It's been over a week since I stuck a post up here! Sorry, Mom...
 
 I'm into week 5 here at [Recurse Center](www.recurse.com), which is crazy, because it feels like I just started yesterday.
 <!--more-->
-I got totally immersed in [Python's Flask microframework](http://flask.pocoo.org/) since my last blogpost. I read [Miguel Grinberg's Flask Book](http://www.flaskbook.com/)
+I got totally immersed in [Python's Flask microframework](http://flask.pocoo.org/) since my last blogpost. I read [Miguel Grinberg's Flask Book](http://www.flaskbook.com/).
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frebir-20&marketplace=amazon&region=US&placement=1449372627&asins=1449372627&linkId=Y4OZWE6G6HEJJZRV&show_border=true&link_opens_in_new_window=true">
 </iframe>
 
 If you're interested in a pretty deep understanding of Flask, and if you want to make a extremely functional flask website, Grinberg's book is the way to go. Check it out, not just because buying it through my link gets me a couple cents in advertising profits from my Amazon ad :)
 
-Since it's week 5 and I'm nearly halfway done, I thought I'd summarize some of the major topics I've learned so far:
+I've been working and working and working on my chess project, which is currently in two parts, [part 1 here](https://github.com/jeffthemaximum/crispy-hippopotamus) and [part 2 here](https://github.com/jeffthemaximum/hippopotamus). Part 1 has users and profiles and passwords, and part 2 has all the chess functionality. I'm in the process of trying to link the two parts into one project based on the lessons I've learned from Grinberg's book.
 
+Since it's week 5 and I'm nearly halfway done, I thought I'd summarize some of the major topics I've learned so far:
 
 1) I didn't know any Python before I got to RC, and now I'm building fully functional web apps with it. I've built a [semi-functional weather webpage](http://jeffweather.herokuapp.com) which required me to work with an API and some JSON from [Weather Underground](http://www.wunderground.com/).
 
