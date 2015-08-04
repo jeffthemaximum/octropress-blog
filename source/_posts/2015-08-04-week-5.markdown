@@ -1,0 +1,39 @@
+---
+layout: post
+title: "Week 5!"
+date: 2015-08-04 18:03:50 -0400
+comments: true
+categories: [recurse updates]
+---
+
+It's been over a week since I stuck a post up here! Sorry, Mom...
+
+I'm into week 5 here at [Recurse Center](www.recurse.com), which is crazy, because it feels like I just started yesterday.
+<!--more-->
+I got totally immersed in [Python's Flask microframework](http://flask.pocoo.org/) since my last blogpost. I read [Miguel Grinberg's Flask Book](http://www.flaskbook.com/)
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frebir-20&marketplace=amazon&region=US&placement=1449372627&asins=1449372627&linkId=Y4OZWE6G6HEJJZRV&show_border=true&link_opens_in_new_window=true">
+</iframe>
+
+If you're interested in a pretty deep understanding of Flask, and if you want to make a extremely functional flask website, Grinberg's book is the way to go. Check it out, not just because buying it through my link gets me a couple cents in advertising profits from my Amazon ad :)
+
+Since it's week 5 and I'm nearly halfway done, I thought I'd summarize some of the major topics I've learned so far:
+
+
+1) I didn't know any Python before I got to RC, and now I'm building fully functional web apps with it. I've built a [semi-functional weather webpage](http://jeffweather.herokuapp.com) which required me to work with an API and some JSON from [Weather Underground](http://www.wunderground.com/).
+
+2) I've solved a bunch of challenges at [CodeEval in Python](https://www.codeeval.com/profile/jeffthemaximum/).
+
+3) I'm working on a [super secret chess website in Python](https://github.com/jeffthemaximum/hippopotamus).
+
+4) I figured out classes and objects and built a [tic-tac-toe game using my object-oriented programming knowledge](https://github.com/jeffthemaximum/python-tic-tac-toe/blob/master/tic_tac_toe.py).
+
+5) I even built a [twitter-bot](https://github.com/jeffthemaximum/python-tic-tac-toe) that updates a twitter feed with recent posts to Reddit TIL subreddit.
+
+6) I made a [URL-shortening website](https://github.com/jeffthemaximum/flask-url-shortener) in flask. This helped teach me about automatically generated routes and URL's in flask, and it also was a good introduction to databases.
+
+7) I've built up some serious database and SQL knowledge. In my [another version of my super secret chess website in Python](https://github.com/jeffthemaximum/crispy-hippopotamus), I've got a full-blown PostGres database and make calls to it with SQLAlchemy.
+
+8) I got a little bit of a handle on AJAX calls. Specifically, I solved one issue that has been bugging me ever since I made [Jeffit](http://fast-woodland-8984.herokuapp.com/). I wanted to update page elements dynamically via AJAX calls with data that's queried from a SQL database. I finally solved that issue in my weather page.
+
+This is just a summary of some of the major things I've learned and worked on so far and can remember now. I hope the next 5 weeks are just as productive!

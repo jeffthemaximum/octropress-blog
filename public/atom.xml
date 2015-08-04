@@ -4,7 +4,7 @@
   <title><![CDATA[Jeff Maxim]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-07-24T14:23:46-04:00</updated>
+  <updated>2015-08-04T18:28:01-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Week 5!]]></title>
+    <link href="https://obscure-atoll-2224.herokuapp.com//blog/2015/08/04/week-5/"/>
+    <updated>2015-08-04T18:03:50-04:00</updated>
+    <id>https://obscure-atoll-2224.herokuapp.com//blog/2015/08/04/week-5</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s been over a week since I stuck a post up here! Sorry, Mom&hellip;</p>
+
+<p>I&rsquo;m into week 5 here at <a href="www.recurse.com">Recurse Center</a>, which is crazy, because it feels like I just started yesterday.</p>
+
+<!--more-->
+
+
+<p>I got totally immersed in <a href="http://flask.pocoo.org/">Python&rsquo;s Flask microframework</a> since my last blogpost. I read <a href="http://www.flaskbook.com/">Miguel Grinberg&rsquo;s Flask Book</a></p>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frebir-20&marketplace=amazon&region=US&placement=1449372627&asins=1449372627&linkId=Y4OZWE6G6HEJJZRV&show_border=true&link_opens_in_new_window=true">
+</iframe>
+
+
+<p>If you&rsquo;re interested in a pretty deep understanding of Flask, and if you want to make a extremely functional flask website, Grinberg&rsquo;s book is the way to go. Check it out, not just because buying it through my link gets me a couple cents in advertising profits from my Amazon ad :)</p>
+
+<p>Since it&rsquo;s week 5 and I&rsquo;m nearly halfway done, I thought I&rsquo;d summarize some of the major topics I&rsquo;ve learned so far:</p>
+
+<p>1) I didn&rsquo;t know any Python before I got to RC, and now I&rsquo;m building fully functional web apps with it. I&rsquo;ve built a <a href="http://jeffweather.herokuapp.com">semi-functional weather webpage</a> which required me to work with an API and some JSON from <a href="http://www.wunderground.com/">Weather Underground</a>.</p>
+
+<p>2) I&rsquo;ve solved a bunch of challenges at <a href="https://www.codeeval.com/profile/jeffthemaximum/">CodeEval in Python</a>.</p>
+
+<p>3) I&rsquo;m working on a <a href="https://github.com/jeffthemaximum/hippopotamus">super secret chess website in Python</a>.</p>
+
+<p>4) I figured out classes and objects and built a <a href="https://github.com/jeffthemaximum/python-tic-tac-toe/blob/master/tic_tac_toe.py">tic-tac-toe game using my object-oriented programming knowledge</a>.</p>
+
+<p>5) I even built a <a href="https://github.com/jeffthemaximum/python-tic-tac-toe">twitter-bot</a> that updates a twitter feed with recent posts to Reddit TIL subreddit.</p>
+
+<p>6) I made a <a href="https://github.com/jeffthemaximum/flask-url-shortener">URL-shortening website</a> in flask. This helped teach me about automatically generated routes and URL&rsquo;s in flask, and it also was a good introduction to databases.</p>
+
+<p>7) I&rsquo;ve built up some serious database and SQL knowledge. In my <a href="https://github.com/jeffthemaximum/crispy-hippopotamus">another version of my super secret chess website in Python</a>, I&rsquo;ve got a full-blown PostGres database and make calls to it with SQLAlchemy.</p>
+
+<p>8) I got a little bit of a handle on AJAX calls. Specifically, I solved one issue that has been bugging me ever since I made <a href="http://fast-woodland-8984.herokuapp.com/">Jeffit</a>. I wanted to update page elements dynamically via AJAX calls with data that&rsquo;s queried from a SQL database. I finally solved that issue in my weather page.</p>
+
+<p>This is just a summary of some of the major things I&rsquo;ve learned and worked on so far and can remember now. I hope the next 5 weeks are just as productive!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Intro to SQLite3 With Python's Flask]]></title>
