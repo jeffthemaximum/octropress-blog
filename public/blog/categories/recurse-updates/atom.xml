@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Recurse Updates | Jeff Maxim]]></title>
   <link href="https://obscure-atoll-2224.herokuapp.com//blog/categories/recurse-updates/atom.xml" rel="self"/>
   <link href="https://obscure-atoll-2224.herokuapp.com//"/>
-  <updated>2015-08-04T18:28:01-04:00</updated>
+  <updated>2015-08-04T18:43:29-04:00</updated>
   <id>https://obscure-atoll-2224.herokuapp.com//</id>
   <author>
     <name><![CDATA[Jeff Maxim]]></name>
@@ -25,13 +25,15 @@
 <!--more-->
 
 
-<p>I got totally immersed in <a href="http://flask.pocoo.org/">Python&rsquo;s Flask microframework</a> since my last blogpost. I read <a href="http://www.flaskbook.com/">Miguel Grinberg&rsquo;s Flask Book</a></p>
+<p>I got totally immersed in <a href="http://flask.pocoo.org/">Python&rsquo;s Flask microframework</a> since my last blogpost. I read <a href="http://www.flaskbook.com/">Miguel Grinberg&rsquo;s Flask Book</a>.</p>
 
 <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frebir-20&marketplace=amazon&region=US&placement=1449372627&asins=1449372627&linkId=Y4OZWE6G6HEJJZRV&show_border=true&link_opens_in_new_window=true">
 </iframe>
 
 
 <p>If you&rsquo;re interested in a pretty deep understanding of Flask, and if you want to make a extremely functional flask website, Grinberg&rsquo;s book is the way to go. Check it out, not just because buying it through my link gets me a couple cents in advertising profits from my Amazon ad :)</p>
+
+<p>I&rsquo;ve been working and working and working on my chess project, which is currently in two parts, <a href="https://github.com/jeffthemaximum/crispy-hippopotamus">part 1 here</a> and <a href="https://github.com/jeffthemaximum/hippopotamus">part 2 here</a>. Part 1 has users and profiles and passwords, and part 2 has all the chess functionality. I&rsquo;m in the process of trying to link the two parts into one project based on the lessons I&rsquo;ve learned from Grinberg&rsquo;s book.</p>
 
 <p>Since it&rsquo;s week 5 and I&rsquo;m nearly halfway done, I thought I&rsquo;d summarize some of the major topics I&rsquo;ve learned so far:</p>
 

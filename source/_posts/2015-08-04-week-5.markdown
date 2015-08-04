@@ -4,7 +4,7 @@ title: "Week 5!"
 date: 2015-08-04 18:03:50 -0400
 comments: true
 categories: [recurse updates]
-published= true
+published: true
 ---
 
 It's been over a week since I stuck a post up here! Sorry, Mom...
